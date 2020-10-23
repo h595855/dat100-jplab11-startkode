@@ -4,67 +4,74 @@ import no.hvl.dat100.jplab11.common.TODO;
 
 public abstract class Innlegg {
 	
-	// TODO - deklarering av objektvariable
+	private int id;
+	private int likes = 0;
+	private String bruker, dato;
 	
 	public Innlegg() {
 		
 	}
 	
 	public Innlegg(int id, String bruker, String dato) {
-
-		// TODO 
-		throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
+		this.id = id;
+		this.bruker = bruker;
+		this.dato = dato;
 	}
 
 	public Innlegg(int id, String bruker, String dato, int likes) {
-
-		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.constructor("Innlegg"));
+		this.id = id;
+		this.bruker = bruker;
+		this.dato = dato;
+		this.likes = likes;
 	}
 	
 	public String getBruker() {
-		
-		throw new UnsupportedOperationException(TODO.method());
-
+		return bruker;
 	}
 
 	public void setBruker(String bruker) {
-		throw new UnsupportedOperationException(TODO.method());
+		this.bruker = bruker;
 	}
 
 	public String getDato() {
-		throw new UnsupportedOperationException(TODO.method());
+		return dato;
 		
 	}
 
 	public void setDato(String dato) {
-		throw new UnsupportedOperationException(TODO.method());
+		this.dato = dato;
 	}
 
 	public int getId() {
-		throw new UnsupportedOperationException(TODO.method());
+		return id;
 
 	}
 
 	public int getLikes() {
-		throw new UnsupportedOperationException(TODO.method());
+		return likes;
 
 	}
 	
 	public void doLike () {
-		throw new UnsupportedOperationException(TODO.method());
+		this.likes = getLikes() + 1;
 	}
 	
 	public boolean erLik(Innlegg innlegg) {
-		throw new UnsupportedOperationException(TODO.method());
-
+		
+		int a = innlegg.getId();
+		if(a == id) {
+			return true;
+		}  
+		return false;
+	
 	}
 	
 	@Override
 	public String toString() {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		String str = id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n"; 
+		System.out.print(str);
+		return str;
 				
 	}
 	
