@@ -70,7 +70,7 @@ public abstract class Innlegg {
 	public String toString() {
 		
 		String str = id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n"; 
-		System.out.print(str);
+		
 		return str;
 				
 	}
